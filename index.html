@@ -46,14 +46,36 @@
             font-size: 4rem;
             font-weight: bold;
         }
+        .webBy{
+            margin: 50px;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .countdown {
+                flex-direction: column;
+                gap: 10px;
+                font-size: 20px;
+            }
+            .countdown div{
+                margin: 20px;
+            }
+            .countdown span {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>We're Coming Soon!</h1>
-       <!-------- <p>Our website is under construction by <a href="https://woxflow.in"><b>WoxFlow</b></a></p> -------->
-        <p>Our website is under construction, Stay Tuned</p>
-        <div class="countdown" id="countdown">
+        <!-- <p>Our website is under construction by <a href="https://woxflow.in"><b>WoxFlow</b></a></p> -->
+        <p>Our website is under construction by <a href="https://woxflow.in"><b>WoxFlow</b></a></p><div class="countdown" id="countdown">
             <div>
                 <span id="days">0</span>
                 Days
@@ -75,7 +97,7 @@
 
     <script>
         function countdown() {
-            const targetDate = new Date('2024-12-31T23:59:59').getTime();
+            const targetDate = new Date('2025-01-03T23:59:59').getTime();
             const now = new Date().getTime();
             const difference = targetDate - now;
 
