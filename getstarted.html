@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <link rel="icon" href="./img/logo.png" type="image/png">
+  <title>Get Started</title>
+  <link rel="stylesheet" href="css/theme.min.css">
+
+  <style>
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    #form-body {
+      animation: fadeInLeft 1s ease-in-out forwards;
+    }
+
+    #submit-btn{
+      background-color: rgb(210, 0, 0);
+      border:none;
+      border-radius: 4px;
+      color: azure;
+    }
+
+    #logo{
+      display: flex;
+      align-items: center;
+    }
+    #logo .logo-text{
+      margin: 5px;
+    }
+    #logo span{
+      font-size: 15px;
+      font-weight: 400;
+    }
+    #logo p{
+      font-size: 12px;
+      font-weight: 500;
+      margin-top: -5px;
+    }
+    #logo img{
+      height: 40px;
+      transform: translateY(-5px);
+    }
+    
+    @media (max-width: 768px){
+    #side-image {
+      display: none;
+    }
+  }
+  ::selection {
+    background-color: rgb(151, 41, 41);
+    color: white;
+  }
+  </style>
+</head>
+
+<body class="d-flex h-100 w-100" data-bs-spy="scroll" data-bs-target="#navScroll">
+
+  <div class="h-100 container-fluid">
+    <div class="h-100 row d-flex align-items-stretch">
+
+      <div class="col-12 col-md-7 col-lg-6 d-flex align-items-start flex-column px-vw-5">
+        <header class="mb-auto py-vh-2 col-12">
+          <a id="logo" class="navbar-brand pe-4 fs-4" href="index.html">
+            <img src="./img/logo.png" alt="">
+            <div class="logo-text">
+              <span>SaySha</span><br>
+              <p>Enterprises</p>
+            </div>
+          </a>
+        </header>
+        <main class="mb-auto col-12">
+          <div id="form-body">
+            <h1>Let's get started</h1>
+            <form class="contact" action="https://api.web3forms.com/submit?redirect=https://thesaysha.com/success.html" method="post">
+              <div class="col-12 col-lg-10 col-xl-8">
+                <input type="hidden" name="access_key" value="66b058d6-2a27-41db-bd33-c2e12aee64dc">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name*</label>
+                  <input type="text" class="form-control form-control-lg" id="name" name="name" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address*</label>
+                  <input type="email" class="form-control form-control-lg" id="email" name="email" aria-describedby="emailHelp" required>
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="Phone" class="form-label">Phone no*</label>
+                  <input type="number" class="form-control form-control-lg" id="Phone" name="phone" required>
+                </div>
+                <div class="mb-3 form-check py-3">
+                  <input type="checkbox" class="form-check-input" id="Check1" name="newsletter_opt_out">
+                  <label class="form-check-label" for="Check1">If you really don't want any newsletter
+                    <strong>check this box</strong>. Then you just agree to receive our marketing mails and product stuff.
+                    If you check this box <strong>we will not send out our newsletter</strong> to you at all.</label>
+                </div>
+                <p class="small text-muted">Fill out the form information correctly and we will reach out shortly</p>
+                <button id="submit-btn" type="submit" class="btn btn-primary btn-xl" value="Send">Submit</button>
+              </div>
+            </form>
+          </div>
+        </main>
+      </div>
+
+      <div id="side-image" class="col-12 col-md-5 col-lg-6 bg-cover" style="background-image: url('./img/webp/colorful.webp');"></div>
+
+    </div>
+  </div>
+</body>
+
+</html>
